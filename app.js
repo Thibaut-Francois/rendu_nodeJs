@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 //const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const Post = require('modele/post')
+const Post = require('./modele/post')
 const port = 3000
-const testRoutes = require('./Route/test')
-const userRoutes = require('./Route/user')
+const testRoutes = require('./Route/route')
+//const userRoutes = require('./Route/user')
 const path = require('path')
-mongoose.connect('mongodb+srv://cedric:tennis78@cluster0.pbcxs.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://Rogal_Dorn:6dmthKHPCSosHkhg@cluster0.loozg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
 {
     useNewUrlParser: true,
     useUnifiedTopology:true
