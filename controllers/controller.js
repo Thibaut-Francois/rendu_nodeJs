@@ -35,9 +35,9 @@ exports.deletePostId = (req,res,next)=>{
         .catch(error => res.status(404).json({error}))
 }
 
-exports.deletePostId = (req,res,next)=>{
+exports.deletePostAll = (req,res,next)=>{
     console.log('delete test all')
-    Post.deleteMany({_id:req.params.id})
+    Post.deleteMany()
         .then(post=> res.status(200).json(post))
         .catch(error => res.status(404).json({error}))
 }
@@ -49,6 +49,17 @@ exports.updatePostId = (req,res,next)=>{
         text: req.body.text,
         autor: req.body.autor
     })
+        .then(post=> res.status(200).json(post))
+        .catch(error => res.status(404).json({error}))
+}
+
+exports.updatePostqejqzusgrfi = (req,res,next)=>{
+    console.log('update test all')
+    Post.updateMany({
+        titre:req.body.titre,
+        text: req.body.text,
+        autor: req.body.autor
+    },)
         .then(post=> res.status(200).json(post))
         .catch(error => res.status(404).json({error}))
 }
